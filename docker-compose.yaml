@@ -1,0 +1,35 @@
+version: '3.8'
+services:
+  app:
+    image: datacontract-manager/datacontract-manager-ce:latest
+    restart: always
+    environment:
+      - APPLICATION_HOST_WEB=http://localhost:8081
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres:5432/postgres
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=postgres
+      - SPRING_MAIL_HOST=mailhog
+      - SPRING_MAIL_PORT=1025
+    ports:
+      - '8081:8080'
+    depends_on:
+      - postgres
+      - mailhog
+  postgres:
+    image: postgres:14.6
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    volumes:
+      - postgres:/var/lib/postgresql/data
+  mailhog:
+    # Test SMTP server, does not actually send mails
+    # View messages in the web UI http://localhost:8025
+    image: mailhog/mailhog:latest
+    restart: always
+    ports:
+      - "8025:8025"
+volumes:
+  postgres:
+    driver: local

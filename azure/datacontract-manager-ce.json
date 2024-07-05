@@ -5,7 +5,7 @@
     "_generator": {
       "name": "bicep",
       "version": "0.28.1.47646",
-      "templateHash": "6236748736682497739"
+      "templateHash": "5720459327701098184"
     }
   },
   "parameters": {
@@ -224,7 +224,7 @@
             },
             {
               "name": "APPLICATION_HOST_WEB",
-              "value": "${WEBSITE_HOSTNAME}"
+              "value": "https://${WEBSITE_HOSTNAME}"
             },
             {
               "name": "SPRING_DATASOURCE_URL",

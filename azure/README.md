@@ -26,7 +26,7 @@ https://${webAppName}.azurewebsites.net
 Configuration
 ---
 
-You need to provide credetials for an SMTP mail server. If you don't have one, you can use [Azure Communication Service](https://learn.microsoft.com/en-us/azure/communication-services/quickstarts/email/send-email-smtp/smtp-authentication) or (SendGrid)[https://portal.azure.com/#create/sendgrid.tsg-saas-offer].
+You need to provide credetials for an SMTP mail server. If you don't have one, you can use [Azure Communication Service](https://learn.microsoft.com/en-us/azure/communication-services/quickstarts/email/send-email-smtp/smtp-authentication) or [SendGrid](https://portal.azure.com/#create/sendgrid.tsg-saas-offer).
 
 
 

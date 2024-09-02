@@ -16,7 +16,7 @@ services:
       - postgres
       - mailhog
   postgres:
-    image: postgres:14.6
+    image: pgvector/pgvector:pg16
     restart: always
     environment:
       - POSTGRES_USER=postgres
